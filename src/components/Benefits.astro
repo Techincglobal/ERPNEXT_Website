@@ -1,0 +1,55 @@
+---
+const benefits = [
+  {
+    title: "Integrated Business Processes",
+    description: "Unifies finance, HR, sales, and manufacturing into a cohesive platform. Break down silos and ensure seamless data flow across your entire organization.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z"
+  },
+  {
+    title: "Improved Data Accuracy",
+    description: "Ensures consistent, real-time updates across departments to reduce error risk. eliminate duplicate entries and trust your numbers with a single source of truth.",
+    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+  },
+  {
+    title: "Automation of Repetitive Tasks",
+    description: "Automates order processing, inventory tracking, and accounting. Free up your team's time to focus on high-value strategic initiatives instead of manual data entry.",
+    icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+  },
+  {
+    title: "Real-Time Insights and Reporting",
+    description: "Live dashboards for monitoring performance metrics and financials. Get instant visibility into your business health and make faster, informed decisions.",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+  },
+  {
+    title: "Scalability for Growing Businesses",
+    description: "Accommodates increasing volumes and users without major upgrades. Whether you're adding new branches or expanding globally, NXTGEN grows with you.",
+    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+  },
+  {
+    title: "Customizability for Unique Needs",
+    description: "Flexible workflows and modules tailored to specific business requirements. Adapt the system to fit your unique processes rather than changing your business to fit the software.",
+    icon: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+  }
+];
+---
+
+<section class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">We Integrate, Improve, Automate and Help you Scale</h2>
+      <p class="text-lg text-slate-600">Unlock the full potential of your enterprise with key benefits designed for success.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {benefits.map(benefit => (
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 group">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={benefit.icon}></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">{benefit.title}</h3>
+          <p class="text-slate-600 leading-relaxed">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

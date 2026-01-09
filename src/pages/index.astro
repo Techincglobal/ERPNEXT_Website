@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ValueProposition from '../components/ValueProposition';
+import Benefits from '../components/Benefits.astro';
+import Industries from '../components/Industries';
+import ProcessWorkflow from '../components/ProcessWorkflow.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+	<Navbar />
+	<main>
+		<Hero />
+		<ValueProposition client:load />
+		<Benefits />
+		<Industries client:visible />
+		<ProcessWorkflow />
+	</main>
+	<Footer />
+</Layout>

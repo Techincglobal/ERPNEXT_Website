@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CustomerList from '../components/CustomerList';
+
+const testimonials = [
+  {
+    quote: "Moving to NXTGEN was the best decision we made. It completely streamlined our manufacturing process and gave us visibility we never had before.",
+    author: "Robert Fox",
+    role: "COO, Apex Manufacturing",
+    image: "https://i.pravatar.cc/150?u=a042581f4e29026704d"
+  },
+  {
+    quote: "The interface is so intuitive that our training time dropped by 60%. The team actually loves using the ERP now.",
+    author: "Leslie Alexander",
+    role: "VP of Operations, RetailGiant",
+    image: "https://i.pravatar.cc/150?u=a042581f4e29026024d"
+  },
+  {
+    quote: "The cloud scalability means we never have to worry about infrastructure. We just doubled in size and the system didn't blink.",
+    author: "Jenny Wilson",
+    role: "CTO, TechFlow",
+    image: "https://i.pravatar.cc/150?u=a042581f4e29026704f"
+  }
+];
+---
+
+<Layout>
+  <Navbar />
+  <main>
+    <div class="pt-32 pb-10 bg-slate-50">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <h1 class="text-4xl font-bold text-blue-500 uppercase tracking-widest">CUSTOMERS</h1>
+       </div>
+    </div>
+
+    <CustomerList client:load />
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+            <h2 class="text-blue-600 font-bold uppercase tracking-wide text-sm mb-2">Testimonials</h2>
+            <h3 class="text-3xl font-bold text-slate-900">Trusted From Happy Clients</h3>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+           <div class="space-y-6">
+              <p class="text-xs text-slate-500 leading-relaxed max-w-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              </p>
+              
+              <div class="flex items-center gap-4">
+                 <div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+                    <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Testimonial" class="w-full h-full object-cover grayscale" />
+                 </div>
+                 <div>
+                    <div class="font-bold text-slate-900 text-sm">Testimonial #1</div>
+                    <div class="text-xs text-slate-500">Designation</div>
+                 </div>
+              </div>
+           </div>
+           
+           <!-- Decorative lines placeholder (CSS based) -->
+           <div class="hidden md:block relative h-40 opacity-20">
+              <svg class="absolute right-0 top-0 h-full w-full" viewBox="0 0 400 200" fill="none" stroke="currentColor">
+                 <path d="M0 100 H400 M300 0 V200 M350 50 Circle" stroke-width="1" class="text-slate-400" />
+                 <circle cx="350" cy="50" r="4" class="fill-slate-400" />
+                 <circle cx="300" cy="150" r="8" class="fill-slate-200" />
+              </svg>
+           </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
