@@ -49,13 +49,13 @@ export default function Industries() {
     const [activeTab, setActiveTab] = useState(industries[0].id);
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-24 bg-white relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50 skew-x-12 translate-x-1/2 z-0"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-4">Whom Do We Help!</h2>
+                <div className="text-center mb-10 md:mb-16">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4">Whom Do We Help!</h2>
                     <p className="text-slate-600">Tailored solutions for your specific sector requirements.</p>
                 </div>
 
